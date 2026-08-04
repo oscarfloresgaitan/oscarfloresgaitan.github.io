@@ -1,0 +1,117 @@
+% Save original href macro and add arrow icon
+\let\hrefWithoutArrow\href
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+% Standardized Layout Environments
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.08cm,
+        parsep=0.08cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.45cm
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{0.15cm}{0.15cm}
+}{
+    \end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{cvheader}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.3}
+}{
+    \par\kern\topsep
+}
+
+% Timestamp macro for foreground shipout (explicit medium/non-bold weight)
+\newcommand{\placelastupdatedtext}{%
+  \AddToShipoutPictureFG*{%
+    \put(
+        \LenToUnit{\paperwidth-2.5cm},
+        \LenToUnit{\paperheight-0.8cm}
+    ){\vtop{{\null}\makebox[0pt][r]{
+        \normalfont\mdseries\small\color{subtleGray}\textit{Last updated \today}
+    }}}%
+  }%
+}
+
+% Macro DSL for Clean Content Authoring
+
+% Header Macro
+\newcommand{\resumeHeader}[5]{%
+    \placelastupdatedtext
+    \begin{cvheader}
+        \textbf{\fontsize{24pt}{24pt}\selectfont \color{primaryColor} #1} \\[0.2cm]
+        \normalsize
+        \mbox{\hrefWithoutArrow{mailto:#2}{\color{darkText}{\footnotesize\faEnvelope[regular]}\hspace*{0.12cm}#2}} \kern 0.4cm
+        \mbox{\hrefWithoutArrow{https://github.com/#3}{\color{darkText}{\footnotesize\faGithub[regular]}\hspace*{0.12cm}#3}} \kern 0.4cm
+        \mbox{\hrefWithoutArrow{https://#4}{\color{darkText}{\footnotesize\faGlobe[regular]}\hspace*{0.12cm}#4}} \kern 0.4cm
+        \ifstrempty{#5}{}{\mbox{\color{darkText}{\footnotesize\faMapMarker*}\hspace*{0.12cm}#5}}
+    \end{cvheader}
+    \vspace{-0.1cm}
+}
+
+% Education Entry Macro
+\newcommand{\resumeEduEntry}[5]{%
+    \begin{twocolentry}{\textit{#4} \\ #2}
+        \textbf{#1} \\ #3
+    \end{twocolentry}
+    \ifstrempty{#5}{}{%
+        \vspace{0.05cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                #5
+            \end{highlights}
+        \end{onecolentry}
+    }
+    \vspace{0.15cm}
+}
+
+% Experience Entry Macro (Research/Teaching)
+\newcommand{\resumeExpEntry}[6]{%
+    \begin{twocolentry}{\textit{#4} \\ #2}
+        \textbf{#1} \\ #3 \ifstrempty{#5}{}{\\ \textit{#5}}
+    \end{twocolentry}
+    \ifstrempty{#6}{}{%
+        \vspace{0.05cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                #6
+            \end{highlights}
+        \end{onecolentry}
+    }
+    \vspace{0.15cm}
+}
+
+% Publication Entry Macro
+\newcommand{\resumePubEntry}[3]{%
+    \item #1. \textit{"#2"}. #3.
+}
+
+% Talk & Poster Entry Macro
+\newcommand{\resumeTalkEntry}[7]{%
+    \item #1, \textit{"#2"}, \textbf{#3} at #4, #5, #6.\ifstrempty{#7}{}{ \href{#7}{Link}}
+}
+
+% Skill Category Macro
+\newcommand{\resumeSkillGroup}[2]{%
+    \begin{onecolentry}
+        \textbf{#1:} #2
+    \end{onecolentry}
+    \vspace{0.08cm}
+}

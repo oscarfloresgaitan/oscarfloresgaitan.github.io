@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --text-display-xl-sz: 36px;
+  --text-headline-lg-sz: 28px;
+  --text-headline-lg-mobile-sz: 24px;
+  --text-headline-md-sz: 20px;
+  --text-body-lg-sz: 16px;
+  --text-body-md-sz: 14px;
+  --text-label-mono-sz: 12px;
+
+  --spacing-margin-md-sz: 16px;
+  --spacing-margin-lg-sz: 32px;
+  --spacing-stack-xl-sz: 48px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --text-display-xl-sz: 80px;
+    --text-headline-lg-sz: 48px;
+    --text-headline-lg-mobile-sz: 32px;
+    --text-headline-md-sz: 24px;
+    --text-body-lg-sz: 18px;
+    --text-body-md-sz: 16px;
+    --text-label-mono-sz: 13px;
+
+    --spacing-margin-md-sz: 32px;
+    --spacing-margin-lg-sz: 64px;
+    --spacing-stack-xl-sz: 128px;
+  }
+}
+
+@theme {
+  --color-surface-container-low: #16161a;
+  --color-surface-container-high: #222222;
+  --color-surface-container-highest: #333333;
+  --color-surface-container-lowest: #000000;
+  --color-surface-variant: #22222a;
+  --color-surface-dim: #111111;
+  --color-surface-bright: #0c0c0f;
+  --color-surface-tint: #2c3fff;
+  --color-surface: #0c0c0f;
+  --color-on-surface: #ffffff;
+  --color-on-surface-variant: #a0a0a5;
+  --color-background: #070709;
+  --color-on-background: #ffffff;
+  --color-primary: #2c3fff;
+  --color-on-primary: #ffffff;
+
+  --font-label-mono: "JetBrains Mono", monospace;
+  --font-body-md: "Hanken Grotesk", sans-serif;
+  --font-headline-md: "Space Grotesk", sans-serif;
+  --font-display-xl: "Space Grotesk", sans-serif;
+  --font-body-lg: "Hanken Grotesk", sans-serif;
+  --font-headline-lg-mobile: "Space Grotesk", sans-serif;
+  --font-headline-lg: "Space Grotesk", sans-serif;
+
+  --text-display-xl: var(--text-display-xl-sz);
+  --text-headline-lg: var(--text-headline-lg-sz);
+  --text-headline-lg-mobile: var(--text-headline-lg-mobile-sz);
+  --text-headline-md: var(--text-headline-md-sz);
+  --text-body-lg: var(--text-body-lg-sz);
+  --text-body-md: var(--text-body-md-sz);
+  --text-label-mono: var(--text-label-mono-sz);
+
+  --spacing-unit: 8px;
+  --spacing-margin-sm: 16px;
+  --spacing-margin-md: var(--spacing-margin-md-sz);
+  --spacing-margin-lg: var(--spacing-margin-lg-sz);
+  --spacing-stack-xl: var(--spacing-stack-xl-sz);
+  --spacing-gutter: 1px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  cursor: none;
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+  font-family: var(--font-body-md);
+  overflow-x: hidden;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Brutalist Hard Shadows & Interactions */
+.brutalist-btn-primary {
+  @apply border border-white/20 bg-primary text-on-primary font-label-mono text-label-mono px-6 py-3 transition-all duration-200 inline-block;
+}
+.brutalist-btn-primary:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 0.2);
+}
+
+.brutalist-btn-secondary {
+  @apply border border-white/20 bg-transparent text-on-surface font-label-mono text-label-mono px-6 py-3 transition-all duration-200 inline-block;
+}
+.brutalist-btn-secondary:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 0.2);
+}
+
+.brutalist-card {
+  @apply border border-white/20 bg-surface p-8 transition-all duration-300 transform-gpu;
+}
+
+a, button, .interactive {
+  cursor: none;
+}
+

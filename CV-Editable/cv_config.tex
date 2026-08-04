@@ -1,0 +1,102 @@
+\usepackage{iftex}
+
+% ATS Parsability
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage[
+    ignoreheadfoot,
+    top=0.75 in,
+    bottom=0.75 in,
+    left=0.75 in,
+    right=0.75 in,
+    footskip=0.4 in,
+]{geometry}
+
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+
+% Color Palette (Modern Academic Physics / Astronomy)
+\definecolor{primaryColor}{RGB}{15, 44, 89}   % Deep Navy
+\definecolor{accentColor}{RGB}{0, 91, 150}    % Academic Blue
+\definecolor{darkText}{RGB}{33, 37, 41}       % Charcoal
+\definecolor{subtleGray}{RGB}{108, 117, 125}  % Muted Gray
+
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+
+\usepackage[
+    pdftitle={Oscar A. Flores Gaitan CV},
+    pdfauthor={Oscar A. Flores Gaitan},
+    pdfcreator={LaTeX with Academic CV Template},
+    colorlinks=true,
+    urlcolor=accentColor,
+    linkcolor=accentColor
+]{hyperref}
+
+\usepackage{etaremune}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+% ATS Parsability
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{multicol}
+\usepackage{etoolbox}
+
+% Global Page Settings
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0cm}
+
+% Custom Footer Setup
+\makeatletter
+\let\ps@customFooterStyle\ps@plain
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \color{subtleGray}\textit{\small Oscar A. Flores Gait\'an — Page \thepage{} of \pageref*{LastPage}}
+}{}{}
+\makeatother
+\pagestyle{customFooterStyle}
+
+% Section & Subsection Titles Formatting
+\titleformat{\section}
+    {\color{primaryColor}\bfseries\large\scshape}
+    {}
+    {0pt}
+    {}
+    [\vspace{1pt}\color{primaryColor}\titlerule]
+
+\titlespacing{\section}{-1pt}{0.35cm}{0.25cm}
+
+\titleformat{\subsection}
+    {\color{primaryColor}\bfseries\normalsize}
+    {}
+    {0pt}
+    {}
+
+\titlespacing{\subsection}{-1pt}{0.25cm}{0.12cm}
+
+% Bullet List Customization
+\renewcommand\labelitemi{\color{accentColor}$\circ$}
