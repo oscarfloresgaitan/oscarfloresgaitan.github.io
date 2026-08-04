@@ -49,7 +49,7 @@ export default function Navbar() {
         }`}
       >
         <a href="#top" onClick={(e) => handleNavClick(e, 'top')} className="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface interactive flex items-center gap-2">
-          O. FLORES GAITÁN
+          O.A. FLORES GAITÁN
         </a>
         <div className="hidden md:flex gap-8 items-center">
           <a
