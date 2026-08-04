@@ -1,19 +1,53 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Oscar A. Flores Gaitán — Personal Website
 
-# Run and deploy your AI Studio app
+Personal website & academic portfolio of **Oscar A. Flores Gaitán**, PhD student in Astrophysics at the University of Delaware.
 
-This contains everything you need to run your app locally.
-https://ai.studio/apps/4e7399ce-7ab2-40e0-9a9b-79c63d7be5c4
+🌐 **Live Website**: [https://oscarfloresgaitan.github.io](https://oscarfloresgaitan.github.io)
 
-## Run Locally
+## About Me
 
-**Prerequisites:**  Node.js
+I am a physicist specializing in exoplanet research, statistical noise mitigation, and orbital dynamics.
 
+- **Current Position**: PhD Student in Astrophysics, University of Delaware (Advised by Prof. Sally Dodson-Robinson)
+- **Education**: Licentiate in Physics, Universidad del Valle de Guatemala (2022–2026)
+- **Research Interests**: Exoplanet detection & characterization, Extreme Stellar-Signals Project (ESSP), Gaussian Process modeling, `orbcloud` package development.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Tech Stack
+
+- **Framework**: React 19 + TypeScript + Vite
+- **Styling**: TailwindCSS v4 with custom brutalist dark theme & design tokens
+- **Internationalization**: Custom React Context supporting English (`en`) & Spanish (`es`)
+- **Deployment**: Automatic GitHub Actions workflow publishing to GitHub Pages
+
+## Local Development
+
+To run the site locally:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/oscarfloresgaitan/oscarfloresgaitan.github.io.git
+   cd oscarfloresgaitan.github.io
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start local development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+## Contact
+
+- **Email**: [ofg@udel.edu](mailto:ofg@udel.edu)
+- **LinkedIn**: [linkedin.com/in/oscarfloresgaitan](https://www.linkedin.com/in/oscarfloresgaitan/)
+- **Google Scholar**: [Scholar Profile](https://scholar.google.com/citations?hl=en&user=6WZnhyUAAAAJ)
+- **ORCID**: [0009-0000-7850-7870](https://orcid.org/0009-0000-7850-7870)
+- **Tutoring Appointments**: [Google Calendar Scheduling](https://calendar.app.google/heNwjeqr5Z465QuN6)
