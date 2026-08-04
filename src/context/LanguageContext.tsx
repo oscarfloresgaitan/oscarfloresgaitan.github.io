@@ -11,6 +11,7 @@ interface LanguageContextType {
 const translations = {
   en: {
     // Navbar
+    'nav.home': 'HOME',
     'nav.research': 'RESEARCH',
     'nav.publications': 'PUBLICATIONS',
     'nav.media': 'MEDIA',
@@ -108,6 +109,7 @@ const translations = {
   },
   es: {
     // Navbar
+    'nav.home': 'INICIO',
     'nav.research': 'INVESTIGACIÓN',
     'nav.publications': 'PUBLICACIONES',
     'nav.media': 'MEDIOS',

@@ -48,10 +48,17 @@ export default function Navbar() {
           scrolled ? 'bg-background/90 backdrop-blur-sm border-b border-white/10' : 'bg-transparent border-transparent'
         }`}
       >
-        <a href="#top" onClick={(e) => handleNavClick(e, 'top')} className="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface interactive">
-          ASTRO_LAB.01
+        <a href="#top" onClick={(e) => handleNavClick(e, 'top')} className="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface interactive flex items-center gap-2">
+          O. FLORES GAITÁN
         </a>
         <div className="hidden md:flex gap-8 items-center">
+          <a
+            className={`font-label-mono text-label-mono transition-colors interactive uppercase ${activeSection === 'top' || activeSection === '' ? 'text-primary font-bold' : 'text-on-surface-variant hover:text-primary'}`}
+            href="#top"
+            onClick={(e) => handleNavClick(e, 'top')}
+          >
+            {t('nav.home')}
+          </a>
           <a
             className={`font-label-mono text-label-mono transition-colors interactive uppercase ${activeSection === 'research' ? 'text-primary font-bold' : 'text-on-surface-variant hover:text-primary'}`}
             href="#research"
@@ -123,6 +130,13 @@ export default function Navbar() {
         }`}
       >
         <div className="flex flex-col items-center justify-center h-full gap-8">
+          <a
+            className={`font-display-xl text-3xl transition-colors interactive uppercase tracking-tighter font-bold ${activeSection === 'top' || activeSection === '' ? 'text-primary' : 'text-on-surface hover:text-primary'}`}
+            href="#top"
+            onClick={(e) => handleNavClick(e, 'top')}
+          >
+            {t('nav.home')}
+          </a>
           <a
             className={`font-display-xl text-3xl transition-colors interactive uppercase tracking-tighter font-bold ${activeSection === 'research' ? 'text-primary' : 'text-on-surface hover:text-primary'}`}
             href="#research"
