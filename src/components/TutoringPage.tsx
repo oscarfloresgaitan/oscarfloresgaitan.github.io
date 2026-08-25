@@ -20,7 +20,7 @@ export default function TutoringPage() {
     back: isEs ? 'Volver' : 'Back',
     heroTitle: isEs ? 'Tutorías de Física y Matemáticas' : 'Physics & Math Tutoring',
     heroSubtitle: isEs ? 'Sesiones personalizadas uno a uno para estudiantes de secundaria y universidad.' : 'Personalized one-on-one sessions for high school and university students.',
-    scheduleBtn: isEs ? 'Agenda tu clase' : 'Schedule Your Session',
+    contactBtn: isEs ? 'Contactar por Correo' : 'Contact via Email',
     statsTitle: isEs ? 'Estadísticas e Impacto' : 'Statistics & Impact',
     statsHours: isEs ? '350+ Horas' : '350+ Hours',
     statsHoursSub: isEs ? 'De tutorías impartidas' : 'Of tutoring delivered',
@@ -29,7 +29,7 @@ export default function TutoringPage() {
     coursesTitle: isEs ? 'Cursos Impartidos' : 'Courses Covered',
     faqTitle: isEs ? 'Preguntas Frecuentes (FAQ)' : 'Frequently Asked Questions (FAQ)',
     ctaTitle: isEs ? '¿Listo para mejorar tus calificaciones?' : 'Ready to Boost Your Grades?',
-    ctaDesc: isEs ? 'Reserva una sesión directamente o envíame un correo para coordinar un plan de estudio adaptado a tus necesidades.' : 'Book a session directly or send me an email to coordinate a study plan tailored to your needs.',
+    ctaDesc: isEs ? 'Envíame un correo a ofg@udel.edu para coordinar un plan de estudio y consultar disponibilidad adaptada a tus necesidades.' : 'Send me an email at ofg@udel.edu to coordinate a study plan and check availability tailored to your needs.',
   };
 
   const courses = [
@@ -125,8 +125,8 @@ export default function TutoringPage() {
     {
       q: isEs ? '¿Con cuánta anticipación debo agendar?' : 'How far in advance should I book?',
       a: isEs
-        ? 'Recomiendo agendar con al menos 24 a 48 horas de anticipación a través del enlace de agendamiento para asegurar disponibilidad, especialmente durante períodos de exámenes finales.'
-        : 'I recommend booking at least 24 to 48 hours in advance using the scheduling link below to secure availability, particularly during midterm and final exam periods.'
+        ? 'Recomiendo ponerse en contacto con al menos 24 a 48 horas de anticipación por correo para consultar disponibilidad y coordinar la sesión.'
+        : 'I recommend getting in touch via email at least 24 to 48 hours in advance to check availability and schedule the session.'
     },
     {
       q: isEs ? '¿Ofreces paquetes de clases o tutorías semanales?' : 'Do you offer class packages or weekly tutoring?',
@@ -159,13 +159,11 @@ export default function TutoringPage() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a 
-              href="https://calendar.app.google/heNwjeqr5Z465QuN6" 
-              target="_blank" 
-              rel="noopener noreferrer"
+              href="mailto:ofg@udel.edu" 
               className="border-2 border-primary bg-primary text-on-primary font-label-mono text-label-mono px-6 py-3.5 hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200 shadow-[4px_4px_0px_0px_rgba(44,63,255,0.4)] flex items-center gap-3 interactive group font-bold"
             >
-              <span className="material-symbols-outlined text-lg">calendar_today</span>
-              {content.scheduleBtn}
+              <span className="material-symbols-outlined text-lg">mail</span>
+              {content.contactBtn}
             </a>
           </div>
         </div>
@@ -246,17 +244,8 @@ export default function TutoringPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a 
-              href="https://calendar.app.google/heNwjeqr5Z465QuN6" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="border-2 border-primary bg-primary text-on-primary font-label-mono text-label-mono px-6 py-3 hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200 shadow-[4px_4px_0px_0px_rgba(44,63,255,0.4)] flex items-center gap-3 interactive font-bold"
-            >
-              <span className="material-symbols-outlined text-lg">calendar_today</span>
-              {content.scheduleBtn}
-            </a>
-            <a 
               href="mailto:ofg@udel.edu" 
-              className="border border-white/20 bg-transparent text-on-surface font-label-mono text-label-mono px-6 py-3 hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200 shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)] flex items-center gap-3 interactive font-bold"
+              className="border-2 border-primary bg-primary text-on-primary font-label-mono text-label-mono px-6 py-3.5 hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200 shadow-[4px_4px_0px_0px_rgba(44,63,255,0.4)] flex items-center gap-3 interactive group font-bold"
             >
               <span className="material-symbols-outlined text-lg">mail</span>
               {isEs ? 'Enviar un Correo' : 'Send an Email'}
