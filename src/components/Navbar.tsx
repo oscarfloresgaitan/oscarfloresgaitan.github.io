@@ -83,14 +83,6 @@ export default function Navbar() {
           </a>
 
           <a
-            className={`font-label-mono text-label-mono transition-colors interactive uppercase ${activeSection === 'teaching' ? 'text-primary font-bold' : 'text-on-surface-variant hover:text-primary'}`}
-            href="#teaching"
-            onClick={(e) => handleNavClick(e, 'teaching')}
-          >
-            {t('nav.teaching')}
-          </a>
-
-          <a
             className={`font-label-mono text-label-mono transition-colors interactive uppercase ${activeSection === 'cv' ? 'text-primary font-bold' : 'text-on-surface-variant hover:text-primary'}`}
             href="#cv"
             onClick={(e) => handleNavClick(e, 'cv')}
@@ -157,13 +149,6 @@ export default function Navbar() {
             onClick={(e) => handleNavClick(e, 'media')}
           >
             {t('nav.media')}
-          </a>
-          <a
-            className={`font-display-xl text-3xl transition-colors interactive uppercase tracking-tighter font-bold ${activeSection === 'teaching' ? 'text-primary' : 'text-on-surface hover:text-primary'}`}
-            href="#teaching"
-            onClick={(e) => handleNavClick(e, 'teaching')}
-          >
-            {t('nav.teaching')}
           </a>
           <a
             className={`font-display-xl text-3xl transition-colors interactive uppercase tracking-tighter font-bold ${activeSection === 'cv' ? 'text-primary' : 'text-on-surface hover:text-primary'}`}

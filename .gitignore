@@ -12,3 +12,4 @@ metadata.json
 *.aux
 *.fls
 *.fdb_latexmk
+.tmp.driveupload/

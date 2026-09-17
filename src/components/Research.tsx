@@ -9,10 +9,13 @@ export default function Research() {
   return (
     <FadeUp id="research" className="px-margin-md md:px-margin-lg py-stack-xl border-b border-white/10">
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-end justify-between mb-8 md:mb-16 border-b border-white/10 pb-4">
-          <h2 className="font-display-xl text-display-xl text-on-surface uppercase font-bold tracking-tighter">
+        <div className="flex flex-col mb-8 md:mb-12 border-b border-white/10 pb-6">
+          <h2 className="font-display-xl text-display-xl text-on-surface uppercase font-bold tracking-tighter mb-4">
             {t('research.title')}
           </h2>
+          <p className="font-body-lg text-body-lg text-on-surface opacity-90 max-w-3xl leading-relaxed">
+            {t('research.lead')}
+          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Card 1 */}

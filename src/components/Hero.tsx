@@ -1,6 +1,6 @@
 import FadeUp from './FadeUp';
 import { useLanguage } from '../context/LanguageContext';
-import profilePhoto from '@/assets/new_pp.png';
+import profilePhoto from '@/assets/pp_gray.png';
 
 export default function Hero() {
   const { t } = useLanguage();

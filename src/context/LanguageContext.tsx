@@ -22,7 +22,7 @@ const translations = {
     // Hero
     'hero.title': 'Oscar a.<br />flores Gaitán',
     'hero.subtitle': 'PhD Student in Astrophysics | Exoplanet Researcher',
-    'hero.description': 'I am a physicist focused on leveraging advanced statistical modeling and machine learning to solve complex problems, specializing in the detection and characterization of exoplanets.',
+    'hero.description': 'I am a physicist focused on precision Doppler detection of exoplanets, modeling stellar activity in spectroscopic time series, and applying statistical and machine learning techniques to astronomical data.',
     'hero.research': 'Research',
     'hero.cv': 'CV',
 
@@ -46,10 +46,11 @@ const translations = {
 
     // About
     'about.title': 'ABOUT ME',
-    'about.text': 'My name is Oscar and I am an incoming PhD student at the Department of Physics and Astronomy at the University of Delaware, working under the guidance of Prof. Sally Dodson-Robinson. I recently graduated with a B.S. in Physics from Universidad del Valle de Guatemala.<br /><br />I have a strong interest in astronomy and astrophysics, particularly in developing and applying statistical and machine learning methods to discover and characterize exoplanets and search for a potential "second Earth". My academic goal is to contribute to the discovery and characterization of new planetary systems and the search for potentially Earth-like worlds.',
+    'about.text': 'My name is Oscar and I am a PhD student in the Department of Physics and Astronomy at the University of Delaware, working under the guidance of Prof. Sally Dodson-Robinson.<br /><br />My research focuses on precision Doppler detection of exoplanets, modeling and mitigating stellar activity, and developing statistical and machine learning methods for astronomical datasets. My goal is to advance and develop statistical methods to discover and characterize new planetary systems and potential Earth-like worlds.',
 
     // Research
     'research.title': 'Research',
+    'research.lead': 'My research combines high-precision Doppler spectroscopy, stellar activity noise mitigation, and statistical tool development to analyze exoplanetary systems.',
     'research.ongoing': 'ONGOING',
     'research.1.title': "Barnard’s Star Planetary System",
     'research.1.desc': "A follow-up analysis of the confirmed four-planet system around Barnard's Star using frequency-domain techniques, Gaussian Process (GP) modeling, orbital configuration exploration, and dynamical stability analysis.",
@@ -113,14 +114,13 @@ const translations = {
     'nav.research': 'INVESTIGACIÓN',
     'nav.publications': 'PUBLICACIONES',
     'nav.media': 'MEDIOS',
-    'nav.teaching': 'TUTORÍAS',
     'nav.contact': 'CONTACTO',
     'nav.resume': 'CURRÍCULUM',
 
     // Hero
     'hero.title': 'Oscar a.<br />flores Gaitán',
     'hero.subtitle': 'Estudiante de Doctorado en Astrofísica | Investigador de Exoplanetas',
-    'hero.description': 'Soy un físico enfocado en el modelado estadístico avanzado y el aprendizaje automático para resolver problemas complejos, especializándome en la detección y caracterización de exoplanetas.',
+    'hero.description': 'Soy un físico enfocado en la detección Doppler de alta precisión de exoplanetas, el modelado de la actividad estelar en series temporales espectroscópicas y la aplicación de técnicas estadísticas y de aprendizaje automático a datos astronómicos.',
     'hero.research': 'Investigación',
     'hero.cv': 'CV',
 
@@ -144,10 +144,11 @@ const translations = {
 
     // About
     'about.title': 'SOBRE MÍ',
-    'about.text': 'Mi nombre es Oscar y soy estudiante de doctorado en el Departamento de Física y Astronomía de la Universidad de Delaware, trabajando bajo la guía de la Prof. Sally Dodson-Robinson. Recientemente me gradué de la Licenciatura en Física de la Universidad del Valle de Guatemala.<br /><br />Tengo un gran interés en la astronomía y la astrofísica, particularmente en el desarrollo y la aplicación de métodos estadísticos y de aprendizaje automático para descubrir y caracterizar exoplanetas y buscar una potencial "segunda Tierra". Mi objetivo académico es contribuir al descubrimiento y caracterización de nuevos sistemas planetarios y a la búsqueda de mundos potencialmente similares a la Tierra.',
+    'about.text': 'Mi nombre es Oscar y soy estudiante de doctorado en el Departamento de Física y Astronomía de la Universidad de Delaware, trabajando bajo la guía de la Prof. Sally Dodson-Robinson.<br /><br />Mi investigación se enfoca en la detección Doppler de alta precisión de exoplanetas, el modelado y la mitigación de la actividad estelar, y el desarrollo de métodos estadísticos y de aprendizaje automático para conjuntos de datos astronómicos. Mi objetivo es avanzar y desarrollar métodos estadísticos para descubrir y caracterizar nuevos sistemas planetarios y potenciales mundos similares a la Tierra.',
 
     // Research
     'research.title': 'Investigación',
+    'research.lead': 'Mi investigación combina espectroscopía Doppler de alta precisión, mitigación del ruido de actividad estelar y el desarrollo de herramientas estadísticas para analizar sistemas exoplanetarios.',
     'research.ongoing': 'EN CURSO',
     'research.1.title': "Sistema Planetario de la Estrella de Barnard",
     'research.1.desc': "Un análisis de seguimiento del sistema confirmado de cuatro planetas alrededor de la Estrella de Barnard utilizando técnicas en el dominio de la frecuencia, modelado de Procesos Gaussianos (GP), exploración de configuraciones orbitales y análisis de estabilidad dinámica.",
@@ -181,18 +182,6 @@ const translations = {
     'media.action.listen': 'ESCUCHAR EN SPOTIFY',
     'media.action.read': 'LEER ARTÍCULO',
     'media.action.watch': 'VER EN YOUTUBE',
-
-    // Teaching
-    'teaching.title': 'Tutorías',
-    'teaching.tutoring.title': 'Tutorías Privadas',
-    'teaching.tutoring.stats': '350+ Horas • 30+ Estudiantes',
-    'teaching.tutoring.desc': 'Ofrezco mentoría académica personalizada e individual en matemáticas y física para niveles de secundaria y universidad, ayudando a estudiantes a dominar conceptos analíticos complejos.',
-    'teaching.courses.label': 'Cursos: ',
-    'teaching.tutoring.courses': 'Precálculo, Cálculo, Física, Cálculo para Negocios, Ecuaciones Diferenciales y Álgebra Lineal',
-    'teaching.tutoring.btn': 'Saber Más',
-    'teaching.ta.title': 'Auxiliar de Cátedra de Pregrado',
-    'teaching.ta.inst': 'Universidad del Valle de Guatemala',
-    'teaching.ta.desc': 'Seleccionado consistentemente por el Departamento de Física para servir como Auxiliar de Cátedra (TA) en siete nombramientos distintos (Física I, II, III y Mecánica I) durante dos años. Dirigí sesiones semanales de laboratorio, califiqué asignaciones y redacté una nueva guía de laboratorio para Física II.',
 
     // Outside
     'outside.title': 'Fuera de la Academia',
