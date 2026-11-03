@@ -1,0 +1,109 @@
+% Save original href macro and add arrow icon
+\let\hrefWithoutArrow\href
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\tiny \faExternalLink*}}}
+
+% Standardized Layout Environments
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.03cm,
+        parsep=0.03cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.42cm
+    ]
+    \color{black}
+    \interlinepenalty=10000
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{0.10cm}{0.10cm}
+}{
+    \end{adjustwidth}
+}
+
+% Rubenzahl Two-Column Environment: Date on the LEFT (2.2 cm, regular non-bold gray), Content on the RIGHT (\fill)
+% Uses unbreakable minipages with \strut baseline synchronization to guarantee entries NEVER split across pages.
+\newenvironment{rubenzahlCols}[1]{%
+    \par\noindent
+    \def\dateText{#1}%
+    \begin{minipage}[t]{2.2cm}%
+        \strut\raggedright\mdseries\small\color{dateColor}\dateText
+    \end{minipage}%
+    \hspace{0.25cm}%
+    \begin{minipage}[t]{\dimexpr\linewidth-2.45cm\relax}%
+        \strut\color{black}\normalsize
+}{%
+    \end{minipage}\par
+}
+
+% Header Macro (Clean, centered modern banner)
+\newcommand{\rubenzahlHeader}[6]{%
+    \begin{center}
+        {\fontsize{23pt}{23pt}\selectfont \textbf{\color{primaryColor} #1}} \\[0.20cm]
+        {\small
+            \mbox{\hrefWithoutArrow{mailto:#2}{\color{darkText}{\footnotesize\faEnvelope[regular]}\hspace*{0.10cm}#2}} \kern 0.35cm • \kern 0.35cm
+            \ifstrempty{#3}{}{\mbox{\hrefWithoutArrow{https://orcid.org/#3}{\color{darkText}{\footnotesize\faOrcid}\hspace*{0.10cm}#3}} \kern 0.35cm • \kern 0.35cm}%
+            \mbox{\hrefWithoutArrow{https://github.com/#4}{\color{darkText}{\footnotesize\faGithub[regular]}\hspace*{0.10cm}#4}} \kern 0.35cm • \kern 0.35cm
+            \mbox{\hrefWithoutArrow{https://#5}{\color{darkText}{\footnotesize\faGlobe[regular]}\hspace*{0.10cm}#5}} \kern 0.35cm • \kern 0.35cm
+            \ifstrempty{#6}{}{\mbox{\color{darkText}{\footnotesize\faMapMarker*}\hspace*{0.10cm}#6}}
+        }
+    \end{center}
+    \vspace{0.05cm}
+}
+
+% Main Entry with Left-Rail Date (using paracol)
+\newcommand{\rubenzahlEntry}[5]{%
+    \begin{rubenzahlCols}{#1}
+        \textbf{\color{primaryColor} #2}\ifstrempty{#3}{}{, \textcolor{dateColor}{\textit{#3}}}%
+        \ifstrempty{#4}{}{\\ \textcolor{black}{#4}}%
+        \ifstrempty{#5}{}{%
+            \vspace{0.02cm}
+            \begin{highlights}
+                #5
+            \end{highlights}
+        }%
+    \end{rubenzahlCols}
+    \vspace{0.08cm}
+}
+
+% Publication Entry with Left-Rail Date
+\newcommand{\rubenzahlPub}[4]{%
+    \begin{rubenzahlCols}{#1}
+        \textcolor{black}{#2, \textit{``#3'',}} \textcolor{dateColor}{#4.}
+    \end{rubenzahlCols}
+    \vspace{0.06cm}
+}
+
+% Software Entry with Left-Rail Date
+\newcommand{\rubenzahlSoftware}[4]{%
+    \begin{rubenzahlCols}{#1}
+        \textcolor{black}{#2, \textit{``#3'',}} \textcolor{dateColor}{#4.}
+    \end{rubenzahlCols}
+    \vspace{0.06cm}
+}
+
+% Presentation Entry with Left-Rail Date
+\newcommand{\rubenzahlTalk}[4]{%
+    \begin{rubenzahlCols}{#1}
+        \textcolor{black}{#2, \textit{``#3''},} \textcolor{dateColor}{#4.}
+    \end{rubenzahlCols}
+    \vspace{0.06cm}
+}
+
+% Award Entry with Left-Rail Date
+\newcommand{\rubenzahlAward}[3]{%
+    \begin{rubenzahlCols}{#1}
+        \textbf{\color{primaryColor} #2}: \textcolor{black}{#3}
+    \end{rubenzahlCols}
+    \vspace{0.08cm}
+}
+
+% Skill Line Macro
+\newcommand{\rubenzahlSkill}[2]{%
+    \begin{adjustwidth}{0.05cm}{0.05cm}
+        \textbf{\color{primaryColor} #1}: \textcolor{black}{#2}
+    \end{adjustwidth}
+    \vspace{0.06cm}
+}

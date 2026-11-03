@@ -20,7 +20,7 @@ export default function Publications() {
                   {t('pub.1.title')}
                 </h3>
                  <p className="font-label-mono text-sm text-on-surface-variant mt-1">
-                  Flores Gaitán, O.A., Dodson-Robinson, S., Ramirez Delgado, V.
+                  Flores-Gaitán, O.A., Dodson-Robinson, S., Ramirez Delgado, V.
                 </p>
               </div>
               <span className="font-label-mono text-label-mono bg-surface-variant text-on-surface px-2 py-1 font-medium whitespace-nowrap ml-4">
@@ -39,7 +39,7 @@ export default function Publications() {
                   {t('pub.2.title')}
                 </h3>
                 <p className="font-label-mono text-sm text-on-surface-variant mt-1">
-                  Zhao, L.L. et al., including Flores Gaitán, O.A.
+                  Zhao, L.L. et al., including Flores-Gaitán, O.A.
                 </p>
               </div>
               <span className="font-label-mono text-label-mono bg-surface-variant text-on-surface px-2 py-1 font-medium whitespace-nowrap ml-4">

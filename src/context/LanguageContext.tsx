@@ -20,7 +20,7 @@ const translations = {
     'nav.resume': 'RESUME',
 
     // Hero
-    'hero.title': 'Oscar a.<br />flores Gaitán',
+    'hero.title': 'Oscar a.<br />flores-Gaitán',
     'hero.subtitle': 'PhD Student in Astrophysics | Exoplanet Researcher',
     'hero.description': 'I am a physicist focused on precision Doppler detection of exoplanets, modeling stellar activity in spectroscopic time series, and applying statistical and machine learning techniques to astronomical data.',
     'hero.research': 'Research',
@@ -63,13 +63,13 @@ const translations = {
     'pub.title': 'Publications',
     'pub.inprep': 'IN PREP',
     'pub.1.title': 'How many terrestrial planets orbit Barnard’s Star?',
-    'pub.1.desc': 'Manuscript in preparation, 2026.',
+    'pub.1.desc': 'To be submitted, 2026.',
     'pub.2.title': 'The Extreme Stellar-Signals Project IV',
     'pub.2.desc': 'Manuscript in preparation, 2026.',
 
     // Media
     'media.title': 'Media',
-    'media.1.title': 'Oscar Flores Gaitán demonstrates the reach of Physics in the search for exoplanets',
+    'media.1.title': 'Oscar Flores-Gaitán demonstrates the reach of Physics in the search for exoplanets',
     'media.1.type': 'ARTICLE',
     'media.1.year': '2026',
     'media.1.desc': 'A feature article in Actualidad UVG highlighting the reach and impact of undergraduate physics training in exoplanet searches',
@@ -118,7 +118,7 @@ const translations = {
     'nav.resume': 'CURRÍCULUM',
 
     // Hero
-    'hero.title': 'Oscar a.<br />flores Gaitán',
+    'hero.title': 'Oscar a.<br />flores-Gaitán',
     'hero.subtitle': 'Estudiante de Doctorado en Astrofísica | Investigador de Exoplanetas',
     'hero.description': 'Soy un físico enfocado en la detección Doppler de alta precisión de exoplanetas, el modelado de la actividad estelar en series temporales espectroscópicas y la aplicación de técnicas estadísticas y de aprendizaje automático a datos astronómicos.',
     'hero.research': 'Investigación',
@@ -161,13 +161,13 @@ const translations = {
     'pub.title': 'Publicaciones',
     'pub.inprep': 'EN PREPARACIÓN',
     'pub.1.title': 'How many terrestrial planets orbit Barnard’s Star?',
-    'pub.1.desc': 'Manuscrito en preparación, 2026.',
+    'pub.1.desc': 'A ser enviado, 2026.',
     'pub.2.title': 'The Extreme Stellar-Signals Project IV',
     'pub.2.desc': 'Manuscrito en preparación, 2026.',
 
     // Media
     'media.title': 'Medios',
-    'media.1.title': 'El Lic. Oscar Flores Gaitán demuestra el alcance de la Física en la búsqueda de exoplanetas',
+    'media.1.title': 'El Lic. Oscar Flores-Gaitán demuestra el alcance de la Física en la búsqueda de exoplanetas',
     'media.1.type': 'ARTÍCULO',
     'media.1.year': '2026',
     'media.1.desc': 'Un artículo destacado de Actualidad UVG que resalta el alcance e impacto de la formación en física en la búsqueda de exoplanetas.',

@@ -11,6 +11,7 @@
         itemsep=0pt,
         leftmargin=0.45cm
     ]
+    \interlinepenalty=10000
 }{
     \end{itemize}
 }
@@ -52,16 +53,17 @@
 
 % Macro DSL for Clean Content Authoring
 
-% Header Macro
-\newcommand{\resumeHeader}[5]{%
+% Header Macro with ORCID support (#3 = ORCID, #4 = GitHub, #5 = Website, #6 = Location)
+\newcommand{\resumeHeader}[6]{%
     \placelastupdatedtext
     \begin{cvheader}
         \textbf{\fontsize{24pt}{24pt}\selectfont \color{primaryColor} #1} \\[0.2cm]
         \normalsize
-        \mbox{\hrefWithoutArrow{mailto:#2}{\color{darkText}{\footnotesize\faEnvelope[regular]}\hspace*{0.12cm}#2}} \kern 0.4cm
-        \mbox{\hrefWithoutArrow{https://github.com/#3}{\color{darkText}{\footnotesize\faGithub[regular]}\hspace*{0.12cm}#3}} \kern 0.4cm
-        \mbox{\hrefWithoutArrow{https://#4}{\color{darkText}{\footnotesize\faGlobe[regular]}\hspace*{0.12cm}#4}} \kern 0.4cm
-        \ifstrempty{#5}{}{\mbox{\color{darkText}{\footnotesize\faMapMarker*}\hspace*{0.12cm}#5}}
+        \mbox{\hrefWithoutArrow{mailto:#2}{\color{darkText}{\footnotesize\faEnvelope[regular]}\hspace*{0.12cm}#2}} \kern 0.35cm
+        \ifstrempty{#3}{}{\mbox{\hrefWithoutArrow{https://orcid.org/#3}{\color{darkText}{\footnotesize\faOrcid}\hspace*{0.12cm}#3}} \kern 0.35cm}%
+        \mbox{\hrefWithoutArrow{https://github.com/#4}{\color{darkText}{\footnotesize\faGithub[regular]}\hspace*{0.12cm}#4}} \kern 0.35cm
+        \mbox{\hrefWithoutArrow{https://#5}{\color{darkText}{\footnotesize\faGlobe[regular]}\hspace*{0.12cm}#5}} \kern 0.35cm
+        \ifstrempty{#6}{}{\mbox{\color{darkText}{\footnotesize\faMapMarker*}\hspace*{0.12cm}#6}}
     \end{cvheader}
     \vspace{-0.1cm}
 }
@@ -84,6 +86,7 @@
 
 % Experience Entry Macro (Research/Teaching)
 \newcommand{\resumeExpEntry}[6]{%
+    \needspace{3.5\baselineskip}%
     \begin{twocolentry}{\textit{#4} \\ #2}
         \textbf{#1} \\ #3 \ifstrempty{#5}{}{\\ \textit{#5}}
     \end{twocolentry}
@@ -100,7 +103,7 @@
 
 % Publication Entry Macro
 \newcommand{\resumePubEntry}[3]{%
-    \item #1. \textit{"#2"}. #3.
+    \item #1, \textit{"#2"}. #3.
 }
 
 % Talk & Poster Entry Macro

@@ -1,4 +1,4 @@
-# Oscar A. Flores Gaitán — Personal Website
+# Oscar A. Flores-Gaitán — Personal Website
 
 🌐 **Live Website**: [https://oscarfloresgaitan.github.io](https://oscarfloresgaitan.github.io)
 

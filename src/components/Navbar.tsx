@@ -12,7 +12,7 @@ export default function Navbar() {
       setScrolled(window.scrollY > 20);
 
       // Scroll Spy Logic
-      const sections = ['research', 'publications', 'media', 'teaching', 'cv', 'footer'];
+      const sections = ['research', 'publications', 'media', 'cv', 'footer'];
       let current = '';
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -30,7 +30,6 @@ export default function Navbar() {
     e.preventDefault();
     setMobileMenuOpen(false);
     
-    // Allow state to update and menu to close before scrolling
     setTimeout(() => {
       const element = document.getElementById(targetId);
       if (element) {
@@ -49,7 +48,7 @@ export default function Navbar() {
         }`}
       >
         <a href="#top" onClick={(e) => handleNavClick(e, 'top')} className="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface interactive flex items-center gap-2">
-          O.A. FLORES GAITÁN
+          O.A. FLORES-GAITÁN
         </a>
         <div className="hidden md:flex gap-8 items-center">
           <a
@@ -99,7 +98,7 @@ export default function Navbar() {
         </div>
         <div className="hidden md:flex items-center gap-4">
           <a
-            href="/OscarFloresGaitanCV_ENGLISH.pdf"
+            href="/CV_Nov2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="brutalist-btn-secondary py-2 px-4 hover:-translate-x-1 hover:-translate-y-1 transition-all interactive"
@@ -150,6 +149,7 @@ export default function Navbar() {
           >
             {t('nav.media')}
           </a>
+
           <a
             className={`font-display-xl text-3xl transition-colors interactive uppercase tracking-tighter font-bold ${activeSection === 'cv' ? 'text-primary' : 'text-on-surface hover:text-primary'}`}
             href="#cv"
@@ -165,7 +165,7 @@ export default function Navbar() {
             {t('nav.contact')}
           </a>
           <a 
-            href="/OscarFloresGaitanCV_ENGLISH.pdf" 
+            href="/CV_Nov2026.pdf" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="brutalist-btn-secondary py-4 px-8 text-xl mt-4 interactive"

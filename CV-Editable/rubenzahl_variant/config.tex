@@ -1,0 +1,92 @@
+\usepackage{iftex}
+
+% ATS Parsability & Clean Sans-Serif Typography
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+    \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+\usepackage[
+    ignoreheadfoot,
+    top=0.65 in,
+    bottom=0.65 in,
+    left=0.70 in,
+    right=0.70 in,
+    footskip=0.35 in,
+]{geometry}
+
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+
+% Refined Modern Astronomy Palette (Inspired by Rubenzahl & Flatiron Institute)
+\definecolor{primaryColor}{RGB}{20, 45, 75}     % Deep Slate Navy
+\definecolor{accentColor}{RGB}{38, 98, 168}     % Rubenzahl Signature Blue
+\definecolor{dateColor}{RGB}{95, 110, 125}      % Slate Gray for left-rail dates
+\definecolor{darkText}{RGB}{34, 38, 42}         % Soft Charcoal for high readability
+\definecolor{subtleGray}{RGB}{125, 135, 145}    % Muted Gray
+
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+
+\usepackage[
+    pdftitle={Oscar A. Flores-Gaitan - CV (Rubenzahl Variant)},
+    pdfauthor={Oscar A. Flores-Gaitan},
+    pdfcreator={LaTeX Modern Academic Sans CV},
+    colorlinks=true,
+    urlcolor=accentColor,
+    linkcolor=accentColor
+]{hyperref}
+
+\usepackage{etaremune}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{multicol}
+\usepackage{etoolbox}
+
+% Global Page Settings
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+
+% Custom Footer Setup (Matching Rubenzahl's bottom footer with icons & page numbers)
+\makeatletter
+\let\ps@customFooterStyle\ps@plain
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \color{subtleGray}\footnotesize\textit{Oscar A. Flores-Gait\'an} \kern 0.3cm • \kern 0.3cm \textit{Page \thepage{} of \pageref*{LastPage}}
+}{}{}
+\makeatother
+\pagestyle{customFooterStyle}
+
+% Rubenzahl Signature Section Headings: Thick Colored Pill Bar on the Left
+\titleformat{\section}
+    {\needspace{4\baselineskip}\color{primaryColor}\bfseries\large}
+    {}
+    {0pt}
+    {\color{accentColor}\rule[0.32ex]{1.6em}{4pt}\hspace{0.50em}}
+
+\titlespacing{\section}{0pt}{0.30cm}{0.14cm}
+
+\titleformat{\subsection}
+    {\needspace{3.5\baselineskip}\color{dateColor}\bfseries\normalsize}
+    {}
+    {0pt}
+    {}
+
+\titlespacing{\subsection}{0pt}{0.18cm}{0.08cm}
+
+% Bullet List Customization
+\renewcommand\labelitemi{\color{accentColor}$\circ$}

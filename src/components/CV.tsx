@@ -30,7 +30,7 @@ export default function CV() {
             {t('cv.title')}
           </h2>
           <a 
-            href="/OscarFloresGaitanCV_ENGLISH.pdf" 
+            href="/CV_Nov2026.pdf" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="border border-white/20 bg-transparent text-on-surface font-label-mono text-label-mono px-4 py-3 md:px-6 md:py-3 hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200 shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)] flex items-center gap-3 interactive group"

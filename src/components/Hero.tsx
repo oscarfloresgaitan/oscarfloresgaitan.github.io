@@ -38,7 +38,7 @@ export default function Hero() {
             <div className="w-full max-w-[400px] aspect-square bg-surface-container-low border-2 border-white/20 rounded-l-full overflow-hidden relative group interactive shadow-[-12px_12px_0px_0px_rgba(44,63,255,0.4)] transition-all duration-300">
               <div className="absolute inset-0 bg-primary opacity-10 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-500"></div>
               <img
-                alt="Oscar A. Flores Gaitán"
+                alt="Oscar A. Flores-Gaitán"
                 className="w-full h-full object-cover"
                 src={profilePhoto}
               />

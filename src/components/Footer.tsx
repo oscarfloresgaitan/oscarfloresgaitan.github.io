@@ -50,7 +50,7 @@ export default function Footer() {
         <div className="lg:col-start-4 w-full flex justify-center lg:justify-end">
           <a
             className="bg-white text-primary border-4 border-primary px-8 py-4 font-display-xl text-2xl uppercase font-bold tracking-tighter hover:bg-primary hover:text-white transition-all duration-200 interactive shadow-[8px_8px_0px_0px_rgba(44,63,255,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[10px_10px_0px_0px_rgba(44,63,255,1)] flex items-center justify-center gap-2 w-fit"
-            href="/OscarFloresGaitanCV_ENGLISH.pdf"
+            href="/CV_Nov2026.pdf"
           >
             <span className="material-symbols-outlined text-3xl">download</span>
             <span className="whitespace-nowrap">{t('footer.download')}</span>
